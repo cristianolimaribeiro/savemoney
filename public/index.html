@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Save Money - Controle Financeiro</title>
+    <link rel="shortcut icon" href="save2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137246024-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-137246024-1');
+    </script>
+    <div class="container">
+        <div class="header">
+            <div class="out-logo">
+                <img src="./save2.png" alt="logomarca" class="logo">
+            </div>
+            
+            <h1 class="title">Save Money</h1>
+            <p>Controle Financeiro</p>
+            
+        </div>
+        <div class="content">
+            <div class="status">
+                <input type="text" id="salary" class="input" placeholder="Informe seu salário">
+                <p class="error" id="error-salary"></p>
+                <p>total líquido R$</p>
+                <div id="display" class="display">0</div>
+            </div>
+            <button id="open-form" class="btn" onclick="validateSalary()">Despesa</button>
+            <div class="list">
+                <h2>despesas</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="releases">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="modal" class="modal hidden">
+                <!-- Conteudo modal-->
+            <div class="content-modal">
+                <div class="modal-header">
+                    <span class="close" id="fecha-modal" >&times;</span>
+                    <h2>Despesa</h2>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="description" placeholder="descrição" autofocus>
+                    <input type="text"id="val"  placeholder="valor">
+                    <input type="text"  id="date-release" onkeyup="dataMask(this,this.value)" maxlength="10" placeholder="data">
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-modal" type="submit" onclick="saveExpense()">salvar</button>
+                    <p class="error" id="error"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

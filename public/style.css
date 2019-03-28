@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    margin: 0; 
+    padding: 0;
+    
+}
+.hidden{
+    display: none;
+
+}
+.container {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    background: #face00;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+}
+.out-logo{
+    position: relative;
+    margin: 0 auto;
+    width: 7em;
+    height: 7em;
+    background: #000;
+    border-radius: 50%;
+    top: 13px;
+}
+.logo{
+    width: 87%;
+    right: 577px;
+    top: 5px;
+}
+h1{
+    font-size: 2.5em;
+}
+.input {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    outline: none;
+    margin-top: 10px;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+.display {
+    margin: 0 auto;
+    width: 20%;
+    height: 25px;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+  }
+  .btn{
+    padding: 8px 63px;
+    margin-top: 38px;
+    border-radius: 5px;
+    font-size: 1.0em;
+    background: #7F6B1E;
+    outline: none;
+    color: rgb(223, 205, 205);
+  }
+.list{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.table{
+    width: 100%;
+    font-size: 24px;
+    text-align: center
+}
+th{
+    width: 200px;
+}
+
+/* MODAL */
+/* background */
+.modal{
+    position: fixed;
+    z-index: 1;
+    padding-top: 280px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* conteudo do modal */
+
+.content-modal{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+.modal-header > h2{
+    margin-left: 37%;
+}
+.modal-body{
+    margin: 30px 0 20px 0;
+}
+/* Animação */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  /* botão fechar */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    right: 15px;
+    position: relative;
+    color: #888;
+}
+.modal-header > h2{
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    max-width: 60%;
+    left: 8px;
+}
+.modal-body{
+    margin: 30px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-body input {
+    width: 60%;
+    margin-left: 1px;
+    margin-bottom: 35px;
+    margin-top: 20px;
+    height: 35px;
+    border-radius: 5px;
+    outline: none; 
+    text-align: center;
+}
+#btn-modal{
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 80px;
+    padding: 10px;
+    background: #face00;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    outline: none;
+}
+.error{
+    color: red;
+}
