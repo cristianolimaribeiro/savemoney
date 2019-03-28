@@ -1,5 +1,6 @@
 {
   "projects": {
-    "projeto": "jsproject-8f3d2"
+    "projeto": "jsproject-8f3d2",
+    "default": "jsproject-8f3d2"
   }
 }
